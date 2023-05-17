@@ -47,7 +47,7 @@ class Desktop extends Computer
 {
     public $scheda_grafica;
 
-    public function __construct(string $scheda_grafica)
+    public function __construct(string $sistema, string $batteria, string $rete, string $scheda_grafica)
     {
         parent::construct($sistema, $batteria, $rete);
         $this->scheda_grafica = $scheda_grafica;
@@ -70,7 +70,7 @@ class Portatile extends Computer
 {
     public $hardware;
 
-    public function __construct(string $hardware)
+    public function __construct(string $sistema, string $batteria, string $rete, string $hardware)
     {
         parent::construct($sistema, $batteria, $rete);
         $this->hardware = $hardware;
@@ -105,9 +105,9 @@ echo $hardware->get_hardware();
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title"><?=$computer->sistema;?></h5>
+    <p class="card-text">$computer->batteria</p>
+
   </div>
 </div>
 
