@@ -5,16 +5,12 @@ class Computer
     public $sistema;
     public $batteria;
     public $rete;
-    public $sconto = 0;
-    public function setSconto($eta)
+    public function __construct(string $sistema, string $batteria, string $rete)
     {
-        if ($eta > 65) {
-            $this->sconto = 40;
-        }
-    }
-    public function getSconto()
-    {
-        return $this->sconto;
+
+        $this->sistema = $sistema;
+        $this->batteria = $batteria;
+        $this->rete = $rete;
     }
 
 }
@@ -22,17 +18,11 @@ class Computer
 class Desktop extends Computer
 {
     public $scheda_grafica;
-    public function setLivello($scheda_grafica)
+
+    public function __construct(string $scheda_grafica)
     {
+        parent::construct($sistema, $batteria, $rete);
         $this->scheda_grafica = $scheda_grafica;
-    }
-    public function setSconto($eta)
-    {
-        if ($eta > 65) {
-            $this->sconto = 50;
-        } else {
-            $this->sconto = $this->livello * 10;
-        }
     }
 
 }
@@ -40,16 +30,11 @@ class Desktop extends Computer
 class Portatile extends Computer
 {
     public $hardware;
-    public function setLivello($hardware)
+
+    public function __construct(string $hardware)
     {
+        parent::construct($sistema, $batteria, $rete);
         $this->hardware = $hardware;
     }
-    public function setSconto($eta)
-    {
-        if ($eta > 65) {
-            $this->sconto = 50;
-        } else {
-            $this->sconto = $this->livello * 10;
-        }
-    }
+
 }
