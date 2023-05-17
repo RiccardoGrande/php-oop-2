@@ -13,7 +13,35 @@ class Computer
         $this->rete = $rete;
     }
 
+    public function get_sistema()
+    {
+        return $this->sistema;
+    }
+
+    public function get_batteria()
+    {
+        return $this->batteria;
+    }
+
+    public function get_rete()
+    {
+        return $this->rete;
+    }
+
 }
+
+$sistema = new Computer();
+$batteria = new Computer();
+$rete = new Computer();
+$sistema->set_sistema('sistema');
+$batteria->set_batteria('batteria');
+$rete->get_rete('rete');
+
+echo $sistema->set_sistema();
+echo "<br>";
+echo $batteria->set_batteria();
+echo "<br>";
+echo $rete->get_rete();
 
 class Desktop extends Computer
 {
@@ -25,7 +53,18 @@ class Desktop extends Computer
         $this->scheda_grafica = $scheda_grafica;
     }
 
+    public function get_scheda()
+    {
+        return $this->scheda_grafica;
+    }
+
 }
+
+$scheda_grafica = new Desktop();
+
+$scheda_grafica->get_scheda('scheda grafica');
+
+echo $scheda_grafica->get_scheda();
 
 class Portatile extends Computer
 {
@@ -37,7 +76,18 @@ class Portatile extends Computer
         $this->hardware = $hardware;
     }
 
+    public function get_hardware()
+    {
+        return $this->hardware;
+    }
+
 }
+
+$hardware = new Portatile();
+
+$hardware->get_hardware('hardware');
+
+echo $hardware->get_hardware();
 
 ?>
 
