@@ -89,12 +89,12 @@ $hardware->get_hardware('hardware');
 
 echo $hardware->get_hardware();
 
-$computer=[
+/* $computer=[
 
-    new Computer=('computer','computer','computer','computer',)
-    new Desktop=('desktop', 'computer','computer','computer',)
-    new Portatile=('portatile', 'computer','computer','computer',)
-]
+new Computer=('computer');
+new Desktop=('desktop');
+new Portatile=('portatile')
+] */
 
 ?>
 
@@ -112,13 +112,13 @@ $computer=[
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"><?= $computer->get_sistema();?></h5>
+    <h5 class="card-title"><?=$computer->get_sistema();?></h5>
     <p class="card-text">
-        <?= $computer->get_batteria();?>
-        <?= $computer->get_hardware();?>
-        <?= $computer->get_scheda();?>
+        <?=$computer->get_batteria();?>
+        <?=$computer->get_hardware();?>
+        <?=$computer->get_scheda();?>
 
-</p>
+    </p>
 
   </div>
 </div>
