@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/models/Computer.php';
+require_once __DIR__ . '/models/Desktop.php';
+require_once __DIR__ . '/models/Portatile.php';
 
 ?>
 
@@ -16,11 +19,12 @@
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"><?=$computer->get_sistema();?></h5>
+    <h5 class="card-title"><?=$computer->set_computer();?></h5>
     <p class="card-text">
-        <?=$computer->get_batteria();?>
+        <?=$computer->get_sistema();?>
         <?=$computer->get_hardware();?>
         <?=$computer->get_scheda();?>
+        <?=$computer->get_batteria();?>
 
     </p>
 

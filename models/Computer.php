@@ -30,13 +30,17 @@ class Computer
 
 }
 
+$computer = new Computer();
 $sistema = new Computer();
 $batteria = new Computer();
 $rete = new Computer();
+$computer->set_computer('computer');
 $sistema->set_sistema('sistema');
 $batteria->set_batteria('batteria');
 $rete->get_rete('rete');
 
+echo $computer->set_computer();
+echo "<br>";
 echo $sistema->set_sistema();
 echo "<br>";
 echo $batteria->set_batteria();
